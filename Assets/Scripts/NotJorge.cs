@@ -8,7 +8,8 @@ public class NotJorge : MonoBehaviour
 
     private GameObject Player;
     private NavMeshAgent nav;
-    private Animator anime; 
+    private Animator anime;
+    private Vector3 OldPos;
     //private Transform Pos;  
 
     //NavMeshAgent Ang;
@@ -24,13 +25,24 @@ public class NotJorge : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       nav.SetDestination(Player.transform.position);
        AnimeUpdate();
+
+
+        if (Vector2.Distance(this.transform.position, Player.transform.position) < 10f)
+        {
+            nav.enabled = true;
+            nav.SetDestination(Player.transform.position);
+        }
+        else
+            nav.enabled = false;
+
+        OldPos = transform.position;
+        //Debug.Log(Vector2.Distance(this.transform.position, Player.transform.position));
     }
 
     void AnimeUpdate()
     {
-        if (nav.destination != transform.position)
+        if (nav.enabled)
             anime.SetBool("Move", true);
         else
             anime.SetBool("Move", false);
