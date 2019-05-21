@@ -25,10 +25,11 @@ public class NotJorge : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
        AnimeUpdate();
 
 
-        if (Vector2.Distance(this.transform.position, Player.transform.position) < 10f)
+        if (Vector2.Distance(this.transform.position, Player.transform.position) < 20f)
         {
             nav.enabled = true;
             nav.SetDestination(Player.transform.position);
@@ -38,6 +39,7 @@ public class NotJorge : MonoBehaviour
 
         OldPos = transform.position;
         //Debug.Log(Vector2.Distance(this.transform.position, Player.transform.position));
+
     }
 
     void AnimeUpdate()
@@ -47,4 +49,5 @@ public class NotJorge : MonoBehaviour
         else
             anime.SetBool("Move", false);
     }
+
 }

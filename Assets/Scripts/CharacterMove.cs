@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 
 public class CharacterMove : MonoBehaviour
@@ -21,7 +22,7 @@ public class CharacterMove : MonoBehaviour
     private float rotUpDown;
     private float verticalRotation = 0f;
     private float verticalVelocity = 0f;
-    Vector3 PlayerSpawn;
+    Vector3 NotJorjeSpawn;
 
     private void Start()
     {
@@ -51,8 +52,9 @@ public class CharacterMove : MonoBehaviour
             //if (SceneManager.GetActiveScene().name != "JustBlock")//현재씬이 이거가 아닐때
             //    Application.OpenURL("https://www.youtube.com/watch?v=HeOkJplUAAs");
 
-            PlayerSpawn = new Vector3(transform.position.x, transform.position.y + 2, transform.position.z + 3);
-            Instantiate(NotJorgePrefab, PlayerSpawn, transform.rotation);
+            //PlayerSpawn = new Vector3(transform.position.x, transform.position.y + 2, Camera.main.transform.position.z);
+            NotJorjeSpawn = transform.position + transform.forward * 20;
+            Instantiate(NotJorgePrefab, NotJorjeSpawn, transform.rotation);
         }
 
         //if (Input.GetKeyDown(KeyCode.LeftControl))
@@ -105,5 +107,14 @@ public class CharacterMove : MonoBehaviour
         verticalRotation -= Input.GetAxis("Mouse Y") * mouseSensitivity;
         verticalRotation = Mathf.Clamp(verticalRotation, -upDownRange, upDownRange);
         Camera.main.transform.localRotation = Quaternion.Euler(verticalRotation, 0f, 0f);
+    }
+
+    void DestoryNotJorge()
+    {
+        GameObject Ang = GameObject.FindWithTag("NotJorge");
+        if (Ang.transform.position.y < -50)
+        {
+            Destroy(Ang);
+        }
     }
 }
