@@ -381,7 +381,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BallPrefab: {fileID: 5072082328741999988, guid: 08dc42aa2b217244d96a512a7ec94090,
     type: 3}
-  NotJorgePrefab: {fileID: 168192681592426929, guid: 7ba30421a73410945b1f0307b8d748a9,
+  NotJorgePrefab: {fileID: 3291769085929506381, guid: 7ba30421a73410945b1f0307b8d748a9,
     type: 3}
   speed: 8
   jumpSpeed: 10
