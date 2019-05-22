@@ -23,6 +23,7 @@ public class NotJorge : MonoBehaviour
         nav = GetComponent<NavMeshAgent>();
         anime = GetComponent<Animator>();
 
+        nav.enabled = false;
         anime.SetBool("Move", false);
     }
 
@@ -45,7 +46,6 @@ public class NotJorge : MonoBehaviour
     {
         nav.enabled = true;
         nav.SetDestination(Player.transform.position);
-      
     }
 
 

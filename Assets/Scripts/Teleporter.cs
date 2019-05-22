@@ -21,6 +21,7 @@ public class Teleporter : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (other.gameObject.tag == "Player")
         LoadingSceneManager.LoadScene(NextScene);
     }
 }
