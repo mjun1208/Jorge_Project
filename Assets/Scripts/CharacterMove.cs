@@ -21,7 +21,7 @@ public class CharacterMove : MonoBehaviour
     private float rotUpDown;
     private float verticalRotation = 0f;
     private float verticalVelocity = 0f;
-    Vector3 PlayerSpawn;
+    Vector3 NotJorgeSpawn;
 
     private void Start()
     {
@@ -51,8 +51,10 @@ public class CharacterMove : MonoBehaviour
             //if (SceneManager.GetActiveScene().name != "JustBlock")//현재씬이 이거가 아닐때
             //    Application.OpenURL("https://www.youtube.com/watch?v=HeOkJplUAAs");
 
-            PlayerSpawn = new Vector3(transform.position.x, transform.position.y + 2, transform.position.z + 3);
-            Instantiate(NotJorgePrefab, PlayerSpawn, transform.rotation);
+            //PlayerSpawn = new Vector3(transform.position.x, transform.position.y + 2, transform.position.z + 3);
+
+            NotJorgeSpawn = transform.position + transform.forward * 20;
+            Instantiate(NotJorgePrefab, NotJorgeSpawn, transform.rotation);
         }
 
         //if (Input.GetKeyDown(KeyCode.LeftControl))

@@ -10,6 +10,8 @@ public class NotJorge : MonoBehaviour
     private NavMeshAgent nav;
     private Animator anime;
     private Vector3 OldPos;
+
+    private Rigidbody Rigid;
     //private Transform Pos;  
 
     //NavMeshAgent Ang;
@@ -20,6 +22,12 @@ public class NotJorge : MonoBehaviour
         Player = GameObject.FindGameObjectWithTag("Player");
         nav = GetComponent<NavMeshAgent>();
         anime = GetComponent<Animator>();
+        Rigid = GetComponent<Rigidbody>();
+
+        nav.enabled = false;
+        anime.SetBool("Move", false);
+
+        Rigid.isKinematic = true;
     }
 
     // Update is called once per frame
@@ -28,14 +36,18 @@ public class NotJorge : MonoBehaviour
        AnimeUpdate();
 
 
-        if (Vector2.Distance(this.transform.position, Player.transform.position) < 10f)
+        if (Vector2.Distance(this.transform.position, Player.transform.position) < 20f)
         {
+            Rigid.isKinematic = false;
             nav.enabled = true;
             nav.SetDestination(Player.transform.position);
         }
         else
+        {
+            Rigid.isKinematic = false;
             nav.enabled = false;
 
+        }
         OldPos = transform.position;
         //Debug.Log(Vector2.Distance(this.transform.position, Player.transform.position));
     }
@@ -47,4 +59,5 @@ public class NotJorge : MonoBehaviour
         else
             anime.SetBool("Move", false);
     }
+
 }
