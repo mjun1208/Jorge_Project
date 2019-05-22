@@ -10,6 +10,8 @@ public class NotJorge : MonoBehaviour
     private NavMeshAgent nav;
     private Animator anime;
     private Vector3 OldPos;
+
+    private SphereCollider Trigger;
     //private Transform Pos;  
 
     //NavMeshAgent Ang;
@@ -20,27 +22,16 @@ public class NotJorge : MonoBehaviour
         Player = GameObject.FindGameObjectWithTag("Player");
         nav = GetComponent<NavMeshAgent>();
         anime = GetComponent<Animator>();
+
+        anime.SetBool("Move", false);
     }
 
     // Update is called once per frame
     void Update()
     {
-
-       AnimeUpdate();
-
-
-        if (Vector2.Distance(this.transform.position, Player.transform.position) < 20f)
-        {
-            nav.enabled = true;
-            nav.SetDestination(Player.transform.position);
-        }
-        else
-            nav.enabled = false;
-
-        OldPos = transform.position;
-        //Debug.Log(Vector2.Distance(this.transform.position, Player.transform.position));
-
+        AnimeUpdate();
     }
+
 
     void AnimeUpdate()
     {
@@ -50,4 +41,27 @@ public class NotJorge : MonoBehaviour
             anime.SetBool("Move", false);
     }
 
+    void NavUpdate()
+    {
+        nav.enabled = true;
+        nav.SetDestination(Player.transform.position);
+      
+    }
+
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+            NavUpdate();
+        else
+            return;
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+            nav.enabled = false;
+        else
+            return;
+    }
 }

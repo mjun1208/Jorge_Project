@@ -61,8 +61,7 @@ public class CharacterMove : MonoBehaviour
         //{
         //    if (SceneManager.GetActiveScene().name != "JustBlock")//현재씬이 이거가 아닐때
         //        SceneManager.LoadScene("JustBlock");
-        //} 
-
+        //}
 
         FPRotate();//마우스회전
 
@@ -107,14 +106,5 @@ public class CharacterMove : MonoBehaviour
         verticalRotation -= Input.GetAxis("Mouse Y") * mouseSensitivity;
         verticalRotation = Mathf.Clamp(verticalRotation, -upDownRange, upDownRange);
         Camera.main.transform.localRotation = Quaternion.Euler(verticalRotation, 0f, 0f);
-    }
-
-    void DestoryNotJorge()
-    {
-        GameObject Ang = GameObject.FindWithTag("NotJorge");
-        if (Ang.transform.position.y < -50)
-        {
-            Destroy(Ang);
-        }
     }
 }
