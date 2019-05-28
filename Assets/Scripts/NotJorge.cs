@@ -14,6 +14,7 @@ public class NotJorge : MonoBehaviour
     private Rigidbody Rigid;
     //private Transform Pos;  
 
+    private string state = "Idle";
     //NavMeshAgent Ang;
 
     // Start is called before the first frame update
@@ -36,7 +37,7 @@ public class NotJorge : MonoBehaviour
        AnimeUpdate();
 
 
-        if (Vector2.Distance(this.transform.position, Player.transform.position) < 20f)
+        if (Vector2.Distance(this.transform.position, Player.transform.position) < 100f)
         {
             Rigid.isKinematic = false;
             nav.enabled = true;
@@ -45,8 +46,30 @@ public class NotJorge : MonoBehaviour
         else
         {
             Rigid.isKinematic = false;
-            nav.enabled = false;
+            //nav.enabled = false;
 
+            //Vector3 randomPos = Random.insideUnitSphere * 5f;
+            //NavMeshHit navHit;
+            //NavMesh.SamplePosition(transform.position + randomPos, out navHit, 20f, NavMesh.AllAreas);
+            //nav.SetDestination(navHit.position);
+
+            if (state == "Idle")
+            {
+                Vector3 randomPos = Random.insideUnitSphere * 5f;
+                NavMeshHit navHit;
+                NavMesh.SamplePosition(transform.position + randomPos, out navHit, 20f, NavMesh.AllAreas);
+                nav.SetDestination(navHit.position);
+
+                state = "Walk";
+            }
+
+            if (state == "Walk")
+            {
+                if (nav.remainingDistance <= nav.stoppingDistance && !nav.pathPending)
+                {
+                    state = "Idle";
+                }
+            }
         }
         OldPos = transform.position;
         //Debug.Log(Vector2.Distance(this.transform.position, Player.transform.position));
