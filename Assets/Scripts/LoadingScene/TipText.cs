@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class TipText : MonoBehaviour
 {
-    string[] tiptext = new string[20];
+    string[] tiptext = new string[900];
     // Start is called before the first frame update
     void Start()
     {
@@ -31,7 +31,18 @@ public class TipText : MonoBehaviour
         tiptext[18] = "여러분이 게임을 즐기고 계실때도 제작자는 게임을 만들고 있는 중입니다.";
         tiptext[19] = "조지 한판 했습니다.... 게임이 안되도 좋지못합니다.";
 
-        int rand = Random.Range(0, 19);
+        tiptext[20] = "조지의 맛은 살짝 달짝지근합니다.";
+        tiptext[21] = "";
+        tiptext[22] = "조지는 4급 공익으로 군면제를 받았습니다.";
+        tiptext[23] = "조지는 사실 유니콘이였습니다.";
+        tiptext[24] = "우효~!! 조지 겟도다제~!";
+        tiptext[25] = "";
+        tiptext[26] = "";
+        tiptext[27] = "";
+        tiptext[28] = "";
+        tiptext[29] = "";
+
+        int rand = Random.Range(0, 29);
         gameObject.GetComponent<Text>().text = tiptext[rand];
 
     }
