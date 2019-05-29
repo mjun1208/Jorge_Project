@@ -80,7 +80,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 64
   m_CollisionDetection: 0
@@ -173,17 +173,17 @@ PrefabInstance:
     - target: {fileID: 3823297806895659312, guid: fbf6c6162befbcc429f2dfd74bcebd8f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3823297806895659312, guid: fbf6c6162befbcc429f2dfd74bcebd8f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.9
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3823297806895659312, guid: fbf6c6162befbcc429f2dfd74bcebd8f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.51
+      value: 3.54
       objectReference: {fileID: 0}
     - target: {fileID: 3823297806895659312, guid: fbf6c6162befbcc429f2dfd74bcebd8f,
         type: 3}
