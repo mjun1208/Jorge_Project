@@ -1,0 +1,273 @@
+fileFormatVersion: 2
+guid: 98be2b7f2345d6641b5519b811588f6f
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Bone001
+    100004: Bone002
+    100006: Bone003
+    100008: Bone004
+    100010: Bone017
+    100012: Bone018
+    100014: Bone019
+    100016: Bone020
+    100018: Bone021
+    100020: Bone022
+    100022: Bone023
+    100024: Bone024
+    100026: Bone025
+    100028: Bone026
+    100030: Bone027
+    100032: Bone028
+    100034: Bone029
+    100036: Bone030
+    100038: Bone031
+    100040: Bone032
+    100042: Bone033
+    100044: Bone034
+    100046: Bone035
+    100048: Bone036
+    100050: Bone037
+    100052: Bone038
+    100054: Bone039
+    100056: Bone040
+    100058: Box004
+    100060: Box005
+    100062: IK Chain001
+    100064: IK Chain002
+    100066: IK Chain003
+    100068: IK Chain004
+    100070: IK Chain005
+    100072: IK Chain006
+    100074: Object001
+    100076: Object002
+    100078: Object005
+    100080: Object006
+    100082: Object007
+    100084: Object008
+    100086: Object009
+    100088: Object010
+    100090: Object011
+    100092: Object012
+    100094: Object013
+    100096: Object014
+    100098: Object015
+    100100: Object016
+    100102: Object017
+    100104: Object018
+    100106: Object019
+    100108: Object020
+    400000: //RootNode
+    400002: Bone001
+    400004: Bone002
+    400006: Bone003
+    400008: Bone004
+    400010: Bone017
+    400012: Bone018
+    400014: Bone019
+    400016: Bone020
+    400018: Bone021
+    400020: Bone022
+    400022: Bone023
+    400024: Bone024
+    400026: Bone025
+    400028: Bone026
+    400030: Bone027
+    400032: Bone028
+    400034: Bone029
+    400036: Bone030
+    400038: Bone031
+    400040: Bone032
+    400042: Bone033
+    400044: Bone034
+    400046: Bone035
+    400048: Bone036
+    400050: Bone037
+    400052: Bone038
+    400054: Bone039
+    400056: Bone040
+    400058: Box004
+    400060: Box005
+    400062: IK Chain001
+    400064: IK Chain002
+    400066: IK Chain003
+    400068: IK Chain004
+    400070: IK Chain005
+    400072: IK Chain006
+    400074: Object001
+    400076: Object002
+    400078: Object005
+    400080: Object006
+    400082: Object007
+    400084: Object008
+    400086: Object009
+    400088: Object010
+    400090: Object011
+    400092: Object012
+    400094: Object013
+    400096: Object014
+    400098: Object015
+    400100: Object016
+    400102: Object017
+    400104: Object018
+    400106: Object019
+    400108: Object020
+    2100000: 03 - Default
+    2300000: Object012
+    3300000: Object012
+    4300000: Box004
+    4300002: Object001
+    4300004: Object002
+    4300006: Object005
+    4300008: Object006
+    4300010: Object007
+    4300012: Object008
+    4300014: Object009
+    4300016: Object010
+    4300018: Object011
+    4300020: Object012
+    4300022: Box005
+    4300024: Object013
+    4300026: Object014
+    4300028: Object015
+    4300030: Object016
+    4300032: Object017
+    4300034: Object018
+    4300036: Object019
+    4300038: Object020
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Box004
+    13700002: Box005
+    13700004: Object001
+    13700006: Object002
+    13700008: Object005
+    13700010: Object006
+    13700012: Object007
+    13700014: Object008
+    13700016: Object009
+    13700018: Object010
+    13700020: Object011
+    13700022: Object013
+    13700024: Object014
+    13700026: Object015
+    13700028: Object016
+    13700030: Object017
+    13700032: Object018
+    13700034: Object019
+    13700036: Object020
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.0254
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

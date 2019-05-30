@@ -18,7 +18,7 @@ public class TipText : MonoBehaviour
         tiptext[6] = "숨겨진 커멘드를 입력하면 새로운 효과가 생길지도..?";
         tiptext[7] = "여러분들은 지금 가본 지역보다 못찾은 지역이 더 많습니다.";
         tiptext[8] = "You made me a, you made me a believer, believer.";
-        tiptext[9] = "조지는 게임이 완성되기까지 많은 변확가 있었습니다. 예를 들어.. 지금 달리기 처럼요.";
+        tiptext[9] = "조지는 게임이 완성되기까지 많은 변화가 있었습니다. 예를 들어.. 지금 달리기 처럼요.";
 
         tiptext[10] = "태양만세";
         tiptext[11] = "지금도 몇몇프로그래머들은 조지 유니버스를 위해 작업중입니다.";
@@ -32,15 +32,15 @@ public class TipText : MonoBehaviour
         tiptext[19] = "조지 한판 했습니다.... 게임이 안되도 좋지못합니다.";
 
         tiptext[20] = "조지의 맛은 살짝 달짝지근합니다.";
-        tiptext[21] = "";
+        tiptext[21] = "조지의 출생지는 워싱턴입니다.";
         tiptext[22] = "조지는 4급 공익으로 군면제를 받았습니다.";
-        tiptext[23] = "조지는 사실 유니콘이였습니다.";
+        tiptext[23] = "조지는 유니콘을 가장 좋아합니다.";
         tiptext[24] = "우효~!! 조지 겟도다제~!";
         tiptext[25] = "";
         tiptext[26] = "";
-        tiptext[27] = "";
-        tiptext[28] = "";
-        tiptext[29] = "";
+        tiptext[27] = "조지의 누나는 리그오브레전드의 조이입니다.";
+        tiptext[28] = "조지의 탄생일은 4월 23일입니다";
+        tiptext[29] = "나는 작은 {조지}..";
 
         int rand = Random.Range(0, 29);
         gameObject.GetComponent<Text>().text = tiptext[rand];
