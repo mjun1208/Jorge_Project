@@ -5,10 +5,13 @@ using UnityEngine.AI;
 
 public class AnteaterMovement : MonoBehaviour
 {
-
+    private GameObject Ant;
+    private GameObject NotJorge;
     private Vector3 movedir;
     private Rigidbody rigid;
     private NavMeshAgent nav;
+
+    private float size = 1f;
 
     private string state = "Idle";
     
@@ -25,21 +28,36 @@ public class AnteaterMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (state == "Idle")
+        Ant = GameObject.FindGameObjectWithTag("Ant");
+        NotJorge = GameObject.FindGameObjectWithTag("NotJorge");
+        if (Ant != null)
         {
-            Vector3 randomPos = Random.insideUnitSphere * 100f;
-            NavMeshHit navHit;
-            NavMesh.SamplePosition(transform.position + randomPos, out navHit, 20f, NavMesh.AllAreas);
-            nav.SetDestination(navHit.position);
-
-            state = "Walk";
+            nav.SetDestination(Ant.transform.position);
+            state = "Idle";
         }
-
-        if(state == "Walk")
+        else if (size >= 3 && NotJorge != null)
         {
-            if(nav.remainingDistance <= nav.stoppingDistance && !nav.pathPending)
+            nav.SetDestination(NotJorge.transform.position);
+            state = "Idle";
+        }
+        else
+        {
+            if (state == "Idle")
             {
-                state = "Idle";
+                Vector3 randomPos = Random.insideUnitSphere * 100f;
+                NavMeshHit navHit;
+                NavMesh.SamplePosition(transform.position + randomPos, out navHit, 20f, NavMesh.AllAreas);
+                nav.SetDestination(navHit.position);
+                state = "Walk";
+
+            }
+
+            if (state == "Walk")
+            {
+                if (nav.remainingDistance <= nav.stoppingDistance && !nav.pathPending)
+                {
+                    state = "Idle";
+                }
             }
         }
     }
@@ -58,5 +76,24 @@ public class AnteaterMovement : MonoBehaviour
         yield return new WaitForSeconds(.5f);
         //코루틴은 다시 시작해줘야함ㅋㅋ;;
         StartCoroutine("Movement");
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Ant")
+        {
+            size += 0.1f;
+            //Debug.Log(size);
+            Destroy(other.gameObject);
+            transform.localScale = new Vector3(size, size, size);
+        }
+
+        if (other.gameObject.tag == "NotJorge")
+        {
+            size += 0.2f;
+            //Debug.Log(size);
+            Destroy(other.gameObject);
+            transform.localScale = new Vector3(size, size, size);
+        }
     }
 }
