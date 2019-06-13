@@ -36,9 +36,9 @@ public class TipText : MonoBehaviour
         tiptext[22] = "조지는 4급 공익으로 군면제를 받았습니다.";
         tiptext[23] = "조지는 유니콘을 가장 좋아합니다.";
         tiptext[24] = "우효~!! 조지 겟도다제~!";
-        tiptext[25] = "";
+        tiptext[25] = "로딩창은 사실 폼입니다";
         tiptext[26] = "";
-        tiptext[27] = "조지의 누나는 리그오브레전드의 조이입니다.";
+        tiptext[27] = "";
         tiptext[28] = "조지의 탄생일은 4월 23일입니다";
         tiptext[29] = "나는 작은 {조지}..";
 
