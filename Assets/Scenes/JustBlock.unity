@@ -426,6 +426,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 168192681592426933, guid: 88e5ef20899751b479fb99ab3c7597fc,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.661
+      objectReference: {fileID: 0}
+    - target: {fileID: 168192681592426933, guid: 88e5ef20899751b479fb99ab3c7597fc,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.226
+      objectReference: {fileID: 0}
     - target: {fileID: 3582337205580786019, guid: 88e5ef20899751b479fb99ab3c7597fc,
         type: 3}
       propertyPath: m_Name
@@ -505,16 +515,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_BackGroundColor.b
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 168192681592426933, guid: 88e5ef20899751b479fb99ab3c7597fc,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.661
-      objectReference: {fileID: 0}
-    - target: {fileID: 168192681592426933, guid: 88e5ef20899751b479fb99ab3c7597fc,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -3.226
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88e5ef20899751b479fb99ab3c7597fc, type: 3}
@@ -1220,9 +1220,9 @@ Light:
   serializedVersion: 8
   m_Type: 0
   m_Color: {r: 1, g: 0.8792537, b: 0, a: 1}
-  m_Intensity: 23
-  m_Range: 20
-  m_SpotAngle: 36
+  m_Intensity: 53.3
+  m_Range: 12.4
+  m_SpotAngle: 49
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
