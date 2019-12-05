@@ -27,9 +27,7 @@ public class CharacterMove : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;//커서를 중앙으로 잠금
         animator = this.GetComponentInChildren<Animator>();
-        animator.SetBool("Move", false);
-
-    }
+        animator.SetBool("Move", false);}
     void Update()
     {
         //PlayerSpawn = new Vector3(0, 0, transform.position.z + 2);
@@ -63,7 +61,7 @@ public class CharacterMove : MonoBehaviour
 
 
         FPRotate();//마우스회전
-
+       
         CharacterController controller = GetComponent<CharacterController>();
         if (controller.isGrounded)
         {
